@@ -1,4 +1,48 @@
+import { useState } from "react";
+import { 
+    FaArrowRight,
+    FaMapMarkedAlt,
+    FaEnvelopeOpen,
+    FaUserGraduate,
+    FaMobile,
+    FaGlobeAfrica,
+    FaFacebookSquare,
+    FaTwitterSquare 
+} from "react-icons/fa"
+
 export default function Contant(){
+    const [onInput, setInput] = useState({
+        name: '',
+        email:'',
+        subject:'',
+        content:''
+    });
+    const [errors, setErrors] = useState({});
+    const [submitting, setSubmitting] = useState(false); 
+    const validateValues =(inputField) =>{
+        let errors = {};
+        const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        if(emailPattern.test(inputField.email) === false){
+            errors.email = "Email is not valid!";
+        }
+        if(inputField.name == '' || inputField.name == null){
+            errors.name = "Enter your name";
+        }
+        if(inputField.subject == '' || inputField.subject == null){
+            errors.subject = "Enter your subject";
+        }
+        if(inputField.content == '' || inputField.content == null || inputField.content.length <= 5 ){
+            errors.content = "Add minimum 5 words in message";
+        }
+        return errors;
+    }
+    const handleChange =(e) =>{
+        setInput({...onInput, [e.target.name]:e.target.value});
+        console.log(validateValues(onInput));
+    }
+    const handleSubmit =(e) =>{
+        e.preventDefault();
+    }
     return(
         <>
         <section className="container contact" id="contact">
@@ -16,7 +60,7 @@ export default function Contant(){
                         <div className="contact-info">
                             <div className="contact-item">
                                 <div className="icon">
-                                    <i className="fas fa-map-marker-alt"></i>
+                                    <FaMapMarkedAlt />
                                     <span>Location</span>
                                 </div>
                                 <p>
@@ -25,7 +69,7 @@ export default function Contant(){
                             </div>
                             <div className="contact-item">
                                 <div className="icon">
-                                    <i className="fas fa-envelope"></i>
+                                    <FaEnvelopeOpen />
                                     <span>Email</span>
                                 </div>
                                 <p>
@@ -34,7 +78,7 @@ export default function Contant(){
                             </div>
                             <div className="contact-item">
                                 <div className="icon">
-                                    <i className="fas fa-user-graduate"></i>
+                                   <FaUserGraduate />
                                     <span>Education</span>
                                 </div>
                                 <p>
@@ -43,7 +87,7 @@ export default function Contant(){
                             </div>
                             <div className="contact-item">
                                 <div className="icon">
-                                    <i className="fas fa-user-graduate"></i>
+                                    <FaMobile />
                                     <span>Mobile Number</span>
                                 </div>
                                 <p>
@@ -52,7 +96,7 @@ export default function Contant(){
                             </div>
                             <div className="contact-item">
                                 <div className="icon">
-                                    <i className="fas fa-globe-africa"></i>
+                                    <FaGlobeAfrica />
                                     <span>Languages</span>
                                 </div>
                                 <p>
@@ -63,37 +107,57 @@ export default function Contant(){
                         <div className="contact-icons">
                             <div className="contact-icon">
                                 <a href="www.facebook.com" target="_blank">
-                                    <i className="fab fa-facebook-f"></i>
+                                    <FaFacebookSquare />
                                 </a>
                                 <a href="#" target="_blank">
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i className="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i className="fab fa-youtube"></i>
+                                    <FaTwitterSquare />
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className="right-contact">
-                        <form action="" className="contact-form">
+                        <form action="" className="contact-form" onSubmit={handleSubmit}>
                             <div className="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME" />
-                                <input type="email" required placeholder="YOUR EMAIL" />
+                                <input 
+                                type="text" 
+                                placeholder="Enter your name"
+                                name="name"
+                                value={onInput.name}
+                                onChange={handleChange} 
+                                />
+                                <input 
+                                type="email" 
+                                name="email"
+                                placeholder="Enter your email"
+                                value={onInput.email}
+                                onChange={handleChange} 
+                                />
                             </div>
                             <div className="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT" />
+                                <input 
+                                type="text" 
+                                name="subject"
+                                placeholder="Enter your subject"
+                                value={onInput.subject}
+                                onChange={handleChange} 
+                                />
                             </div>
                             <div className="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                                <textarea 
+                                name="content" 
+                                id="" 
+                                cols="15" 
+                                rows="8" 
+                                placeholder="Enter your text here..."
+                                onChange={handleChange}
+                                defaultValue={onInput.content}
+                                ></textarea>
                             </div>
                             <div className="submit-btn">
-                                <a href="#" className="main-btn">
-                                    <span className="btn-text">Download CV</span>
-                                    <span className="btn-icon"><i className="fas fa-download"></i></span>
-                                </a>
+                                <button className="main-btn" type="submit">
+                                    <span className="btn-text">Submit</span>
+                                    <span className="btn-icon"><FaArrowRight /></span>
+                                </button>
                             </div>
                         </form>
                     </div>

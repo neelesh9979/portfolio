@@ -42,7 +42,9 @@ body {
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
-
+body.light-mode .control svg,body.light-mode .theme-btn svg,body.light-mode .btn-icon svg  {
+  fill: #fff;
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -634,6 +636,7 @@ section {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  background: transparent;
 }
 .main-btn .btn-text {
   padding: 0 2rem;
