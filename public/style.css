@@ -5,3 +5,6 @@
     text-decoration: none;
     background: transparent;
 }
+body{
+    background: red !important;
+}
