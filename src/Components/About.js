@@ -1,3 +1,4 @@
+import {FaDownload} from "react-icons/fa"
 export default function About(){
     return(
         <>
@@ -7,24 +8,33 @@ export default function About(){
             </div>
             <div className="about-container">
                 <div className="left-about">
-                    <h4>Information About me</h4>
+                    <h1 className="name">
+                    👋 Hi, I'm <span>Neelesh Sahu.</span>
+                    </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
-                        vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                        delectus dolore fugiat exercitationem a, 
-                        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Harum non necessitatibus deleniti eum soluta.
+                    I'm a passionate software developer with a love for crafting elegant code and solving complex problems. With 5 years of experience in the software development industry, I've had the privilege of working on a wide range of projects, from web applications and Ecommerce site to backend systems and everything in between.
                     </p>
-                    <div className="btn-con">
+                    <h1>🚀 My Mission:</h1>
+                    <p>My mission is to create software that not only meets the highest standards of quality but also exceeds the expectations of clients and end-users. I'm dedicated to continuously improving my skills and staying up-to-date with the latest technologies to ensure that I deliver the best solutions possible.</p>
+                    <h1>💻 Expertise:</h1>
+                    <p>I specialize in Shopify, Wordpress, wix & PHP and have a deep understanding of Godaddy, Hostinger and NameCheap. I'm also skilled in React and NodeJs.</p>
+                    <h1>🌟 What Sets Me Apart:</h1>
+                    <p>What sets me apart as a developer is my commitment to clean, maintainable code and my ability to communicate technical concepts in a clear and understandable way. I'm not just a coder; I'm a problem solver who can bridge the gap between technology and the people who use it.</p>
+                    <h1>📚 Lifelong Learner:</h1>
+                    <p>In the world of software development, continuous learning is essential. I'm constantly exploring new technologies, attending conferences, and reading about industry trends to ensure I stay at the forefront of my field.</p>
+                    <h1>🌍 Let's Connect:</h1>
+                    <p>
+                    I'm always open to new opportunities, collaboration, and interesting projects. If you'd like to work together or just have a chat, feel free to get in touch. You can reach me at <a href="mailto:developerneelesh@gmail.com" className="email">developerneelesh@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/neelesh-sahu-97b2aa20b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="linkdin">LinkedIn</a>.
+                    </p>
+                    <p>Thanks for stopping by, and I look forward to connecting with you!</p>
+                    {/* <div className="btn-con">
                         <a href="#" className="main-btn">
                             <span className="btn-text">Download CV</span>
-                            <span className="btn-icon"><i className="fas fa-download"></i></span>
+                            <span className="btn-icon"><FaDownload /></span>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
-                <div className="right-about">
+                {/* <div className="right-about">
                     <div className="about-item">
                         <div className="abt-text">
                             <p className="large-text">650+</p>
@@ -49,31 +59,67 @@ export default function About(){
                             <p className="small-text">Customer <br /> reviews</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="about-stats">
                 <h4 className="stat-title">My Skills</h4>
                 <div className="progress-bars">
                     <div className="progress-bar">
-                        <p className="prog-title">html5</p>
+                        <p className="prog-title">HTML5</p>
                         <div className="progress-con">
-                            <p className="prog-text">80%</p>
+                            <p className="prog-text">95%</p>
                             <div className="progress">
                                 <span className="html"></span>
                             </div>
                         </div>
                     </div>
                     <div className="progress-bar">
-                        <p className="prog-title">css3</p>
+                        <p className="prog-title">CSS3</p>
                         <div className="progress-con">
-                            <p className="prog-text">95%</p>
+                            <p className="prog-text">90%</p>
                             <div className="progress">
                                 <span className="css"></span>
                             </div>
                         </div>
                     </div>
                     <div className="progress-bar">
-                        <p className="prog-title">javascript</p>
+                        <p className="prog-title">SHOPIFY</p>
+                        <div className="progress-con">
+                            <p className="prog-text">80%</p>
+                            <div className="progress">
+                                <span className="css"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="progress-bar">
+                        <p className="prog-title">WORDPRESS</p>
+                        <div className="progress-con">
+                            <p className="prog-text">80%</p>
+                            <div className="progress">
+                                <span className="css"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="progress-bar">
+                        <p className="prog-title">LIQUID</p>
+                        <div className="progress-con">
+                            <p className="prog-text">80%</p>
+                            <div className="progress">
+                                <span className="css"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="progress-bar">
+                        <p className="prog-title">PHP</p>
+                        <div className="progress-con">
+                            <p className="prog-text">45%</p>
+                            <div className="progress">
+                                <span className="css"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="progress-bar">
+                        <p className="prog-title">JAVASCRIPT</p>
                         <div className="progress-con">
                             <p className="prog-text">75%</p>
                             <div className="progress">
@@ -93,14 +139,14 @@ export default function About(){
                     <div className="progress-bar">
                         <p className="prog-title">NodeJS</p>
                         <div className="progress-con">
-                            <p className="prog-text">87%</p>
+                            <p className="prog-text">45%</p>
                             <div className="progress">
                                 <span className="node"></span>
                             </div>
                         </div>
                     </div>
                     <div className="progress-bar">
-                        <p className="prog-title">Python</p>
+                        <p className="prog-title">Bootstrap</p>
                         <div className="progress-con">
                             <p className="prog-text">70%</p>
                             <div className="progress">
@@ -108,69 +154,6 @@ export default function About(){
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <h4 className="stat-title">My Timeline</h4>
-            <div className="timeline">
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2010 - present</p>
-                    <h5>Web Developer<span> - Vircrosoft</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2008 - 2011</p>
-                    <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2016 - 2017</p>
-                    <h5>C++ Programmer<span> - Slime Tech</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2009 - 2013</p>
-                    <h5>Business Degree<span> - Sussex University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2013 - 2016</p>
-                    <h5>Computer Science Degree<span> - Brookes University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div className="timeline-item">
-                    <div className="tl-icon">
-                        <i className="fas fa-briefcase"></i>
-                    </div>
-                    <p className="tl-duration">2017 - present</p>
-                    <h5>3d Animation<span> - Brighton University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
                 </div>
             </div>
         </section>

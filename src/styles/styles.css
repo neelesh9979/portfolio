@@ -209,10 +209,13 @@ section {
 
 /*About*/
 .about-container {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(2, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
+}
+.about-container .left-about h1.name span,.linkdin, .email {
+  color: var(--color-secondary);
 }
 .about-container .right-about {
   display: grid;
